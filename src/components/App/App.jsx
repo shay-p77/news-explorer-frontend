@@ -9,7 +9,7 @@ import NoResults from "../NoResults/NoResults";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import "../App/App.css";
-import { getNews } from "../../utils/newsapi";
+import { getNews } from "../../utils/newsApi";
 import SavedArticles from "../SavedArticles/SavedArticles";
 import RegisterSuccessModal from "../RegisterSuccessModal/RegisterSuccessModal";
 
