@@ -1,0 +1,43 @@
+.saved {
+  background-color: #ffffff;
+  padding: 40px 104px 80px;
+  color: #1a1b22;
+}
+
+.saved__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1A1B2280;
+  opacity: 50%;
+  margin: 0 0 28px;
+}
+
+.saved__title {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  margin: 0 0 20px;
+}
+
+.saved__keywords {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 56px;
+}
+
+.saved__keywords-bold {
+  font-weight: 700;
+}
+
+.saved__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+ 

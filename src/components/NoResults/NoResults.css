@@ -1,0 +1,26 @@
+.no__results {
+  text-align: center;
+  padding: 40px 20px;
+  color: #2f2f2f;
+}
+
+.no__results-icon {
+  width: 82.5px;
+  height: 82.5px;
+  margin-top: 32px;
+}
+
+.no__results-title {
+  font-family: "Roboto Slab", sans-serif;
+  color: #1a1b22;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.no__results-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #b6bcbf;
+}
