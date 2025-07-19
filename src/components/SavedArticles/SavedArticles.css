@@ -66,3 +66,14 @@
     gap: 8px;
   }
 }
+
+@media (max-width: 320px) {
+  .saved {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .saved__label {
+    font-size: 12px;
+  }
+}

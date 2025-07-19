@@ -13,11 +13,10 @@ body,
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: "Inter", "Roboto", "Roboto Slab", Arial, sans-serif;
 }
 
 .results__background {
   background-color: #f5f6f7;
   width: 100%;
 }
-
- 

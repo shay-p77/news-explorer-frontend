@@ -35,12 +35,12 @@ function NewsCard({
 
   return (
     <article className="news-card">
-      {/* Keyword label */}
+      {/* keyword label */}
       {isOnSavedPage && keyword && (
         <span className="news-card__keyword">{keyword}</span>
       )}
 
-      {/* Wrapper div for button and tooltip with relative positioning */}
+      {/* wrapper div for button and tooltip with relative positioning */}
       <div
         style={{ position: "relative" }}
         onMouseEnter={() =>
@@ -50,12 +50,12 @@ function NewsCard({
           isOnSavedPage ? setIsDeleteHovered(false) : setIsHovered(false)
         }
       >
-        {/* Tooltip for not logged in */}
+        {/* tooltip for not logged in */}
         {!isLoggedIn && isHovered && !isOnSavedPage && (
           <div className="news-card__tooltip">Sign in to save articles</div>
         )}
 
-        {/* Save or Delete button */}
+        {/* save or Delete button */}
         <button
           className="news-card__save-button"
           onClick={handleSaveClick}
@@ -75,7 +75,7 @@ function NewsCard({
           />
         </button>
 
-        {/* Tooltip for delete button */}
+        {/* tooltip for delete button */}
         {isOnSavedPage && isDeleteHovered && (
           <div className=" news-card__tooltip-delete">Remove from saved</div>
         )}

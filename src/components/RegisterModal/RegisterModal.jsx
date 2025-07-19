@@ -6,10 +6,12 @@ function RegisterModal({ isOpen, onClose, onRegister, onOpenLogin }) {
   const [errors, setErrors] = useState({});
   const [isValid, setIsValid] = useState(false);
 
-function validateEmailAvailable(email) {
-  const users = JSON.parse(localStorage.getItem("users") || "[]");
-  return !users.some(user => user.email.toLowerCase() === email.toLowerCase());
-}
+  function validateEmailAvailable(email) {
+    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    return !users.some(
+      (user) => user.email.toLowerCase() === email.toLowerCase()
+    );
+  }
 
   function handleChange(e) {
     const { name, value, validationMessage } = e.target;

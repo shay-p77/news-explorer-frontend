@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import githubIcon from "../../assets/github.svg";
- import linkedinIcon from "../../assets/linkedin.svg";
+import linkedinIcon from "../../assets/linkedin.svg";
 
 function Footer() {
   return (
@@ -33,7 +33,11 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedinIcon} alt="LinkedIn" className="footer__icon-linkedin" />
+          <img
+            src={linkedinIcon}
+            alt="LinkedIn"
+            className="footer__icon-linkedin"
+          />
         </a>
       </nav>
     </footer>

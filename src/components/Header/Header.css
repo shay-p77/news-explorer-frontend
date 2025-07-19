@@ -93,6 +93,17 @@
   display: none;
 }
 
+/* overlay behind mobile nav */
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
 @media (max-width: 768px) {
   .header {
     padding-left: 40px;
@@ -101,12 +112,10 @@
 }
 
 @media (max-width: 320px) {
-  /* Header padding on small screens */
   .header {
     padding: 16px;
   }
 
-  /* Shrink logo size for mobile */
   .header__logo {
     position: relative;
     z-index: 1001;
@@ -114,7 +123,7 @@
     height: 24px;
   }
 
-  /* Hamburger icon for mobile */
+  /* hamburger icon for mobile */
   .header__menu-icon {
     display: block;
     cursor: pointer;
@@ -126,7 +135,7 @@
     border: none;
   }
 
-  /* Hamburger icon bars */
+  /* hamburger icon bars */
   .header__menu-icon span {
     position: absolute;
     height: 3px;
@@ -144,7 +153,7 @@
     top: 7px;
   }
 
-  /* Hamburger transforms into 'X' */
+  /* hamburger transforms into 'X' */
   .header__menu-icon_open span:nth-child(1) {
     transform: rotate(45deg);
     top: 7px;
@@ -155,12 +164,12 @@
     top: 7px;
   }
 
-  /* Light theme bars */
+  /* light theme bars */
   .header_theme_light .header__menu-icon span {
     background-color: #1a1b22;
   }
 
-  /* Mobile dropdown container */
+  /* mobile dropdown container */
   .nav {
     display: none;
     flex-direction: column;
@@ -175,17 +184,17 @@
     box-sizing: border-box;
   }
 
-  /* Open dropdown menu */
+  /* open dropdown menu */
   .nav.nav_open {
     display: flex;
   }
 
-  /* Light theme mobile menu background */
+  /* light theme mobile menu background */
   .header_theme_light .nav {
     background-color: #fff;
   }
 
-  /* Default spacing for nav items (not logged in) */
+  /* default spacing for nav items (not logged in) */
   .nav__link,
   .nav__button {
     width: 288px;
@@ -194,18 +203,17 @@
     margin-bottom: 12px;
   }
 
-  /* Nav link style in dropdown */
+  /* nav link style in dropdown */
   .nav__link {
     padding: 40px 16px 22px 16px;
   }
 
-  /* Hide underline indicator on mobile */
+  /* hide underline indicator on mobile */
   .nav__link_active::after {
     display: none;
   }
 
-  /*  Logged-in dropdown ONLY  */
-
+  /*  logged-in dropdown ONLY  */
   .nav_logged-in .nav__link,
   .nav_logged-in .nav__button {
     height: auto;
@@ -214,7 +222,7 @@
     width: 100%;
   }
 
-  /* Add more top space below the logo ONLY when logged in */
+  /* add more top space below the logo ONLY when logged in */
   .nav.nav_logged-in {
     padding-top: 56px;
   }
@@ -224,7 +232,7 @@
     font-size: 16px;
   }
 
-  /* Space between user name and logout icon */
+  /* space between user name and logout icon */
   .nav_logged-in .nav__button .header__logout {
     margin-left: 6px;
   }

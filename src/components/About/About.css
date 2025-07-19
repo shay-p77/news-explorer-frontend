@@ -35,7 +35,8 @@
 
 @media (max-width: 768px) {
   .about {
-    padding: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
     gap: 32px;
   }
 
@@ -51,15 +52,13 @@
 
 @media (max-width: 320px) {
   .about {
-     display: block;
+    display: block;
   }
 
   .about__photo {
     width: 272px;
     height: 272px;
-    }
-
-    
+  }
 
   .about__title {
     font-size: 30px;

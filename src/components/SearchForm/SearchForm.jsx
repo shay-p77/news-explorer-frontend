@@ -1,9 +1,8 @@
-import {useState} from "react";
+import { useState } from "react";
 import "./SearchForm.css";
 
 function SearchForm({ onSearch }) {
-
-    const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();

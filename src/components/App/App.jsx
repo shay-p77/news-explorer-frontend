@@ -150,7 +150,7 @@ function App() {
     openLoginModal();
   }
 
-  // Save article along with current search keyword
+  // save article along with current search keyword
   function handleSaveArticle(article) {
     const articleWithKeyword = { ...article, keyword: searchKeyword };
     if (!savedArticles.some((a) => a.link === article.link)) {

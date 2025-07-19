@@ -92,6 +92,12 @@ function Header({ isLoggedIn, currentUser, onSignInClick, onLogout }) {
           </button>
         )}
       </nav>
+      {isMobileMenuOpen && (
+        <div
+          className="header__overlay"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
     </header>
   );
 }
