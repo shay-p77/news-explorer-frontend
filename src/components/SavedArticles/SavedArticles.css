@@ -1,5 +1,5 @@
 .saved {
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 40px 104px 80px;
   color: #1a1b22;
 }
@@ -9,7 +9,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  color: #1A1B2280;
+  color: #1a1b2280;
   opacity: 50%;
   margin: 0 0 28px;
 }
@@ -32,12 +32,37 @@
 
 .saved__keywords-bold {
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .saved__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
 
- 
+@media (max-width: 768px) {
+  .saved__label {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .saved {
+    padding: 24px 40px 0px 40px;
+  }
+
+  .saved__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .saved__keywords {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .saved__cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+}

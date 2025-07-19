@@ -12,14 +12,14 @@ function NewsCardList({ cards, isLoggedIn, savedArticles, onSave, onUnsave }) {
   const visibleCards = cards.slice(0, visibleCount);
 
   return (
-    <section className="news__card-list">
-      <h2 className="news__card-list_title">Search results</h2>
-      <div className="news__card-list_container">
+    <section className="news-card-list">
+      <h2 className="news-card-list__title">Search results</h2>
+      <div className="news-card-list__container">
         {visibleCards.map((card, index) => {
           const isSaved = savedArticles.some((a) => a.link === card.link);
           return (
             <NewsCard
-              key={card.link || index}   
+              key={card.link || index}
               card={card}
               isSaved={isSaved}
               isLoggedIn={isLoggedIn}
@@ -30,7 +30,7 @@ function NewsCardList({ cards, isLoggedIn, savedArticles, onSave, onUnsave }) {
         })}
       </div>
       {visibleCount < cards.length && (
-        <button className="news__card-list_button" onClick={handleShowMore}>
+        <button className="news-card-list__button" onClick={handleShowMore}>
           Show more
         </button>
       )}

@@ -13,9 +13,6 @@
   line-height: 22px;
 }
 
-.footer__links {
-}
-
 .footer__link {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -26,16 +23,10 @@
   padding-right: 40px;
 }
 
-.footer__icon-link_github {
-}
-
 .footer__icon-github {
   width: 20px;
   height: 20px;
   padding-right: 26px;
-}
-
-.footer__icon-link_linkedin {
 }
 
 .footer__icon-linkedin {
@@ -43,3 +34,27 @@
   height: 20px;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 40px 18px 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    flex-direction: column-reverse;
+    padding: 0px;
+  }
+
+  .footer__text {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 22px;
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+
+  .footer__links {
+    display: flex;
+  }
+}

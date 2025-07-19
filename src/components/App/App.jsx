@@ -138,7 +138,7 @@ function App() {
     setIsLoggedIn(false);
     setCurrentUser(null);
     setSavedArticles([]);
-    navigate("/");  
+    navigate("/");
   }
 
   function closeRegisterSuccessModal() {
@@ -184,13 +184,15 @@ function App() {
       {location.pathname === "/" && (
         <>
           {!isLoading && isSearched && searchResults.length > 0 && (
-            <NewsCardList
-              cards={searchResults}
-              isLoggedIn={isLoggedIn}
-              savedArticles={savedArticles}
-              onSave={handleSaveArticle}
-              onUnsave={handleRemoveArticle}
-            />
+            <div className="results__background">
+              <NewsCardList
+                cards={searchResults}
+                isLoggedIn={isLoggedIn}
+                savedArticles={savedArticles}
+                onSave={handleSaveArticle}
+                onUnsave={handleRemoveArticle}
+              />
+            </div>
           )}
 
           {!isLoading && isSearched && searchResults.length === 0 && !error && (
@@ -227,6 +229,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />} />
+
         <Route
           path="/saved-articles"
           element={

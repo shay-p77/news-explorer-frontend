@@ -40,7 +40,7 @@ function SavedArticles({ savedArticles, onRemove, currentUser }) {
         <span className="saved__keywords-bold">{keywordDisplay()}</span>
       </p>
 
-      <div className="news__card-list_container">
+      <div className="saved__cards">
         {savedArticles.map((article) => (
           <NewsCard
             key={article.link}
