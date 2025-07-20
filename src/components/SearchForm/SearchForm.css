@@ -114,6 +114,11 @@
 
   .search__form {
     margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 16px;
+    width: 288px;
   }
 
   .search__input {
@@ -128,5 +133,6 @@
     top: 80px;
     left: 16px;
     font-size: 18px;
+    position: static;
   }
 }
