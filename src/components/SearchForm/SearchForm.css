@@ -102,6 +102,24 @@
   }
 }
 
+@media (max-width: 600px) {
+  .search__input {
+    width: 400px;
+  }
+}
+
+@media (max-width: 527px) {
+  .search__input {
+    width: 350px;
+  }
+}
+
+@media (max-width: 487px) {
+  .search__input {
+    width: 300px;
+  }
+}
+
 @media (max-width: 320px) {
   .search__title {
     font-size: 36px;

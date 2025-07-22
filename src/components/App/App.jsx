@@ -12,6 +12,7 @@ import "../App/App.css";
 import { getNews } from "../../utils/newsApi";
 import SavedArticles from "../SavedArticles/SavedArticles";
 import RegisterSuccessModal from "../RegisterSuccessModal/RegisterSuccessModal";
+import "../../index.css";
 
 function App() {
   const location = useLocation();

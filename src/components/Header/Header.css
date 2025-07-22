@@ -111,7 +111,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 487px) {
   .header {
     padding: 16px;
   }
@@ -175,8 +175,11 @@
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 487px;
+    min-width: 320px;
     height: 230px;
     background-color: #1a1b22;
     padding: 32px 16px;
