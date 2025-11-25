@@ -1,0 +1,242 @@
+.header {
+  padding-left: 104px;
+  padding-right: 104px;
+  padding-top: 19px;
+  padding-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  background-color: transparent;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 42px;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.nav__link_active::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.nav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 100px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.header__logout {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* For saved articles page (white background, dark text) */
+.header_theme_light {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav__link_light {
+  color: #1a1b22;
+}
+
+.nav__link_light.nav__link_active::after {
+  background-color: #1a1b22;
+}
+
+.nav__button_light {
+  color: #1a1b22;
+  border: 1px solid #1a1b22;
+}
+
+.header__menu-icon {
+  display: none;
+}
+
+/* overlay behind mobile nav */
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 487px) {
+  .header {
+    padding: 16px;
+  }
+
+  .header__logo {
+    position: relative;
+    z-index: 1001;
+    width: 117px;
+    height: 24px;
+  }
+
+  /* hamburger icon for mobile */
+  .header__menu-icon {
+    display: block;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* hamburger icon bars */
+  .header__menu-icon span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+
+  .header__menu-icon span:nth-child(1) {
+    top: 0;
+  }
+
+  .header__menu-icon span:nth-child(2) {
+    top: 7px;
+  }
+
+  /* hamburger transforms into 'X' */
+  .header__menu-icon_open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 7px;
+  }
+
+  .header__menu-icon_open span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: 7px;
+  }
+
+  /* light theme bars */
+  .header_theme_light .header__menu-icon span {
+    background-color: #1a1b22;
+  }
+
+  /* mobile dropdown container */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 487px;
+    min-width: 320px;
+    height: 230px;
+    background-color: #1a1b22;
+    padding: 32px 16px;
+    z-index: 999;
+    box-sizing: border-box;
+  }
+
+  /* open dropdown menu */
+  .nav.nav_open {
+    display: flex;
+  }
+
+  /* light theme mobile menu background */
+  .header_theme_light .nav {
+    background-color: #fff;
+  }
+
+  /* default spacing for nav items (not logged in) */
+  .nav__link,
+  .nav__button {
+    width: 288px;
+    height: 56px;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  /* nav link style in dropdown */
+  .nav__link {
+    padding: 40px 16px 22px 16px;
+  }
+
+  /* hide underline indicator on mobile */
+  .nav__link_active::after {
+    display: none;
+  }
+
+  /*  logged-in dropdown ONLY  */
+  .nav_logged-in .nav__link,
+  .nav_logged-in .nav__button {
+    height: auto;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  /* add more top space below the logo ONLY when logged in */
+  .nav.nav_logged-in {
+    padding-top: 56px;
+  }
+
+  .nav_logged-in .nav__button {
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  /* space between user name and logout icon */
+  .nav_logged-in .nav__button .header__logout {
+    margin-left: 6px;
+  }
+}

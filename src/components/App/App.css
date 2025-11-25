@@ -1,0 +1,22 @@
+.hero-wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", "Roboto", "Roboto Slab", Arial, sans-serif;
+}
+
+.results__background {
+  background-color: #f5f6f7;
+  width: 100%;
+}
